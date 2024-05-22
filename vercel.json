@@ -1,0 +1,40 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.ts",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/dist/(.*)",
+        "dest": "/dist/$1"
+      },
+      {
+        "src": "/src/(.*)",
+        "dest": "/src/$1"
+      },
+      {
+        "src": "/config/(.*)",
+        "dest": "/config/$1"
+      },
+      {
+        "src": "/controllers/(.*)",
+        "dest": "/controllers/$1"
+      },
+      {
+        "src": "/model/(.*)",
+        "dest": "/model/$1"
+      },
+      {
+        "src": "/routes/(.*)",
+        "dest": "/routes/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.ts"
+      }
+    ]
+  }
+  
